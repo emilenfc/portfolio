@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "IYADUKUNZE Emile",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/preact": "^3.1.0",
+    "@astrojs/rss": "^4.0.5",
+    "astro": "^4.2.1",
+    "preact": "^10.19.5",
+    "scenejs": "^1.10.3"
+  }
+}

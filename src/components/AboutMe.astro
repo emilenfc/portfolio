@@ -1,0 +1,146 @@
+---
+let title= "About Me"
+let skills = [["Bootstrap","CSS3","Figma","HTML5","JavaScript","React","Redux","Sass","Tailwind","TypeScript"], ["Docker","Express","GraphQL","MongoDB","MySQL","Node.js","PostgreSQL","Redis","SQLite","TypeScript"],["Jest", "Mocha"],["Git","GitHub"],["CircleCI","Docker","Linux","Nginx","Postman","Trello","Web3.js"]];
+
+let description= "I am a Software Engineer with a passion for building innovative solutions. Currently, I am part of the Andela Technical Leadership Program (ATLP), where I am enhancing my skills in software engineering, gaining expertise in full-stack development with technologies such as React, Node.js, TypeScript, and more. I worked on different projects with different technology as backend and frontend dev. In my role as a Junior Technical Team Leader at Tekki Ltd, I lead backend development using Node.js, TypeScript, Nest.js, Docker, and Swagger. My responsibilities include enforcing coding standards, conducting code reviews, and leading the frontend team in Angular.js. I am focused on delivering high-performance, user-centric full-stack applications with a positive team culture."
+let additional_text= "I thrive on collaborating with great minds to achieve realistic solutions."
+let image = {
+  url: "../public/imageemile.png",
+  alt: "Emile's Image"
+}
+---
+      <h2>{title}</h2>
+<div class="about-me-container">
+  
+  <div class="about-me-intro">
+
+    <div class="about-me-text">
+      <p>{description}</p>
+      <h3>Skills</h3>
+      <div class="skills-categories">
+            <div class="about-me-image">
+      <img src={image.url} alt={image.alt}>
+            <p>{additional_text}</p>
+
+    </div>
+    <div>
+
+        <span>
+          <h4>frontend </h4>
+          <ul class="skills-list">
+            {skills[0].map((skill) => (
+              <li class="skill">{skill}</li>
+            ))}
+          </ul>
+        </span>
+        <span>
+          <h4>backend</h4>
+          <ul class="skills-list">
+            {skills[1].map((skill) => (
+              <li class="skill">{skill}</li>
+            ))}
+          </ul>
+        </span>
+        <span>
+          <h4>testing</h4>
+          <ul class="skills-list">
+            {skills[2].map((skill) => (
+              <li class="skill">{skill}</li>
+            ))}
+          </ul>
+        </span>
+        <span>
+          <h4>version_control</h4>
+          <ul class="skills-list">
+            {skills[3].map((skill) => (
+              <li class="skill">{skill}</li>
+            ))}
+          </ul>
+        </span>
+        <span>
+          <h4>others</h4>
+          <ul class="skills-list">
+            {skills[4].map((skill) => (
+              <li class="skill">{skill}</li>
+            ))}
+          </ul>
+        </span>
+            </div>
+
+      </div>
+            <p class="not-p">{additional_text}</p>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .about-me-container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  .about-me-intro {
+    gap: 1rem;
+    display: flex; /* Enable responsive layout */
+    flex-wrap: wrap;
+  }
+
+  .about-me-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+.about-me-image {
+  margin-right: 2%;
+}
+  .about-me-text {
+    text-align: justify;
+    flex-grow: 1; /* Make text area take up remaining space */
+    padding-left: 1rem; /* Add space beside the image on larger screens */
+    order: 2; /* Show text after image on larger screens */
+  }
+
+  .skills-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skill {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #007bff;
+    font-size: 0.8rem;
+  }
+    .not-p{
+      display: none
+    }
+
+  @media (max-width: 768px) {
+    .not-p{
+      display: block
+    }
+    .about-me-image {
+      order: 1; /* Show image before text on small screens */
+      margin-bottom: 1rem; /* Add space between image and text on small screens */
+      display: none;
+    }
+    .about-me-text {
+      text-align: center; /* Center text on small screens */
+      padding-left: 0; /* Remove left padding on small screens */
+      order: 2; /* Show text after image on small screens */
+    }
+    .skills-categories {
+      justify-content: center; /* Center skill categories on small screens */
+    }
+  }
+</style>

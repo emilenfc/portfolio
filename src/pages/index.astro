@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
+import Greeting from '../components/Greeting';
+import Welcome from '../components/Welcome.astro';
+import AboutMe from '../components/AboutMe.astro';
+import WhatIDo from '../components/WhatIDO.astro';
+
+let messages=["Welcome! Thank you for visiting me!","Bienvenue! Merci de m’avoir rendu visite!", "Habari! Asante kwa kunitembelea!", "Willkommen! Vielen Dank für Ihren Besuch!","Salve! Gratias tibi ago pro me adire!"]
+---
+<BaseLayout pageTitle={pageTitle}>
+  <Greeting client:visible messages={messages} />
+<Welcome/> 
+<AboutMe/>
+<WhatIDo/>
+</BaseLayout>

@@ -1,0 +1,112 @@
+---
+let image = {
+  url: "../public/imageemile.png",
+  alt: "Emile's Image"
+}
+let name = "IYADUKUNZE Emile.";
+let git= "emilenfc"
+let linkedIn = ""
+let upwork ="";
+let twitter="";
+let intagram="";
+
+---
+
+  <div class="home-container">
+    <div class="intro">
+      <div class="intro-text">
+        <h1>Hi, I'm {name}</h1>
+        <p>A Full-Stack Web Developer with a vast experience in front-end and back-end development. I have variety of certificates from top institutions and a passion for exploring new technologies.</p>
+        <div class="social-links">
+          <a href=`https://github.com/${git}` target="_blank">GitHub</a>
+          <a href=`https://www.linkedin.com/in/${linkedIn}` target="_blank">LinkedIn</a>
+          <a href=`https://www.upwork.com/freelancers/${upwork}` target="_blank">Upwork</a>
+          <a href=`https://twitter.com/${twitter}` target="_blank">Twitter</a>
+          <a href=`https://www.instagram.com/${intagram}` target="_blank">Instagram</a>
+        </div>
+        <button class="talk-btn">Let's talk</button>
+      </div>
+      <div class="intro-image">
+        <img src={image.url} alt={image.alt}>
+      </div>
+    </div>
+  </div>
+
+<style>
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .intro-text {
+    max-width: 600px;
+    margin-right: 20px;
+  }
+.social-links{
+  margin-bottom: 20px;
+}
+  .social-links a {
+    border: dotted 1.5px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em;
+    font-size: 1.15em;
+    margin-right: 10px;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #007bff;
+    font-weight: bold;
+        transition: color 0.4s ease;
+
+  }
+
+  .talk-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+
+  .talk-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .intro-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .intro-text {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+  }
+</style>

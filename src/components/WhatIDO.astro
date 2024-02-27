@@ -1,0 +1,81 @@
+---
+const skills = [
+  {
+    imageUrl: {"url":'https://source.unsplash.com/random',"alt":"web development image"},
+    title: 'Web Development',
+    description: 'I specialize in building responsive and user-friendly web applications using modern frontend and backend technologies.'
+  },
+  {
+    imageUrl: {"url":'https://source.unsplash.com/random',"alt":"mobile development image"},
+    title: 'Mobile Development',
+    description: 'I create native and cross-platform mobile apps that provide engaging experiences on iOS and Android devices.'
+  },
+  {
+    imageUrl: {"url":'https://source.unsplash.com/random',"alt":"blockchain development image"},
+    title: 'Blockchain Development',
+    description: 'I develop decentralized applications (dApps) and smart contracts on various blockchain platforms.'
+  }
+];
+---
+<h2>What I Do</h2>
+<div class="what-i-do">
+  {skills.map((skill) => ( 
+    <div class="what-i-do-item">
+      <div class="what-i-do-image">
+        <img src={skill.imageUrl.url} alt={skill.imageUrl.alt}>
+      </div>
+      <div class="what-i-do-text">
+        <h1 class="what-i-do-title">{skill.title}</h1>
+        <p class="what-i-do-description">{skill.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .what-i-do {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .what-i-do-item {
+    flex: 1 1 calc(50% - 1rem); /* Two items in a row, with 1rem gap */
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .what-i-do-image {
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    border-radius: 8px; /* Add border radius for a rounded appearance */
+    overflow: hidden; /* Hide overflow for border-radius */
+  }
+
+  .what-i-do-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .what-i-do-title {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-top: 1rem; /* Add some space between image and title */
+  }
+
+  .what-i-do-description {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .what-i-do-item {
+      flex: 1 1 100%; /* On smaller screens, show one item per row */
+    }
+  }
+</style>
