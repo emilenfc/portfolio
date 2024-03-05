@@ -1,0 +1,106 @@
+---
+  let email = "iyaemile4@gmail.com";
+  let emailLink = `mailto:${email}`;
+  let phone = "+250 783 544 364";
+  let phoneLink = `tel:${phone}`;
+---
+<h2 id="contact">Get in touch</h2>
+<div class="contact-info">
+  <p>Email: <a href={emailLink}>{email}</a></p>
+  <p>Phone: <a href={phoneLink}>{phone}</a></p>
+</div>
+
+<form class="contact-form">
+  <p><strong>Send me a message</strong></p>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email..." required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your phone..." required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message or project description</label>
+    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+  </div>
+  <button type="submit">Send</button>
+</form>
+
+<style>
+  .contact-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-info p {
+    margin: 5px;
+  }
+
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 10px;
+    }
+  }
+</style>
+
